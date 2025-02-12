@@ -483,7 +483,7 @@ class SingleCounter:
     def reset(self):
         """Reset counters and integration."""
         self.logweights = []
-        self.H = None
+        self.H = 0
         self.logZ = -np.inf
         self.logZerr = np.inf
         self.logVolremaining = 0
@@ -639,7 +639,7 @@ class MultiCounter:
         self.istail = []
         self.logZ = -np.inf
         self.logZerr = np.inf
-        self.all_H = -np.nan * np.ones(nentries)
+        self.all_H = np.zeros(nentries)
         self.all_logZ = -np.inf * np.ones(nentries)
         self.all_logVolremaining = np.zeros(nentries)
         self.logVolremaining = 0.0
